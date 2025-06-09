@@ -2291,9 +2291,26 @@ input, select, textarea {
 }
 
 .cert-title {
-    font-size: 16px;
-    margin-top: 10px;
-    color: #333;
+    margin: 1em 0 0 0;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.cert-title a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cert-title a:hover {
+    color: #4acaa8;
+}
+
+@media screen and (max-width: 736px) {
+    .cert-title {
+        font-size: 0.85em;
+    }
 }
 
 /* Main */
@@ -2797,3 +2814,366 @@ input, select, textarea {
 		font-size: 0.97em;
 		line-height: 1.5;
 	}
+
+/* Description Page Styles */
+.description-page {
+    background-color: #fff;
+}
+
+.description-hero {
+    background-color: #f5fafa;
+    padding: 4em 0;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.description-title {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: #222629;
+}
+
+.description-meta {
+    color: #666;
+    font-size: 1.1em;
+}
+
+.description-meta span {
+    margin: 0 1em;
+}
+
+.description-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 2em;
+}
+
+.featured-image {
+    margin-bottom: 2em;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    background-color: #f4f4f4;
+}
+
+.featured-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-image iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: white;
+}
+
+@media screen and (max-width: 736px) {
+    .featured-image {
+        margin-bottom: 1.5em;
+        padding-top: 75%; /* 4:3 Aspect Ratio for mobile */
+    }
+}
+
+.overview-section,
+.features-section,
+.technical-section,
+.gallery-section {
+    margin-bottom: 3em;
+}
+
+.description-content h2 {
+    color: #222629;
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    border-bottom: 2px solid #8ebebc;
+    padding-bottom: 0.5em;
+}
+
+.feature-list,
+.tech-list {
+    list-style-type: disc;
+    margin-left: 1.5em;
+    font-size: 1.0em;
+    line-height: 1.6;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5em;
+    margin-top: 1.5em;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive Design for Description Page */
+@media screen and (max-width: 736px) {
+    .description-title {
+        font-size: 2em;
+    }
+
+    .description-content {
+        padding: 0 1em;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* LinkedIn Button Styles */
+.linkedin-button-container {
+    text-align: center;
+    margin: 3em 0;
+}
+
+.linkedin-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    background-color: #0077b5;
+    color: white !important;
+    padding: 0.75em 2em;
+    border-radius: 0.35em;
+    transition: background-color 0.35s ease-in-out;
+}
+
+.linkedin-button:hover {
+    background-color: #005582;
+}
+
+.linkedin-button i {
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 736px) {
+    .linkedin-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Medium Button Styles */
+.medium-button-container {
+    text-align: center;
+    margin: 3em 0;
+}
+
+.medium-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    background-color: #00ab6c;
+    color: white !important;
+    padding: 0.75em 2em;
+    border-radius: 0.35em;
+    transition: background-color 0.35s ease-in-out;
+}
+
+.medium-button:hover {
+    background-color: #008055;
+}
+
+.medium-button i {
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 736px) {
+    .medium-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Project Navigation Styles */
+.project-nav {
+    margin: 2em 0;
+    text-align: center;
+}
+
+.project-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 0.75em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.project-nav li {
+    margin: 0;
+}
+
+.project-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75em;
+    height: 2.75em;
+    background-color: #f4f4f4;
+    color: #666;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.project-nav a:hover {
+    background-color: #4acaa8;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.project-nav a.active {
+    background-color: #4acaa8;
+    color: white;
+}
+
+@media screen and (max-width: 736px) {
+    .project-nav ul {
+        gap: 0.5em;
+    }
+    
+    .project-nav a {
+        width: 2.25em;
+        height: 2.25em;
+        font-size: 0.85em;
+    }
+}
+
+/* Project Slideshow Styles */
+.projects-slideshow {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.projects-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.project-container {
+    flex: 0 0 100%;
+    padding: 2em;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+}
+
+.project-container.active {
+    opacity: 1;
+    display: block;
+}
+
+.project-nav {
+    margin: 2em 0;
+    text-align: center;
+}
+
+.project-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-nav li {
+    margin: 0;
+}
+
+.project-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3em;
+    height: 3em;
+    background-color: #f4f4f4;
+    color: #666;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.project-nav a:hover {
+    background-color: #4acaa8;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.project-nav a.active {
+    background-color: #4acaa8;
+    color: white;
+}
+
+@media screen and (max-width: 736px) {
+    .project-nav ul {
+        gap: 0.5em;
+    }
+    
+    .project-nav a {
+        width: 2.5em;
+        height: 2.5em;
+        font-size: 0.9em;
+    }
+}
+
+/* GitHub Button Styles */
+.github-button-container {
+    text-align: center;
+    margin: 3em 0;
+}
+
+.github-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    background-color: #24292e;
+    color: white !important;
+    padding: 0.75em 2em;
+    border-radius: 0.35em;
+    transition: background-color 0.35s ease-in-out;
+}
+
+.github-button:hover {
+    background-color: #1b1f23;
+}
+
+.github-button i {
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 736px) {
+    .github-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
